@@ -19,9 +19,8 @@ $ bundle
 ## Running Locally
 1. add `.env` to root of repo with `POSTGRES_USER` and `POSTGRES_PASSWORD` defined
 2. `source .env`
-3. `cd spec/dummy`
-4. `bundle install`
-5. `rails s`
+3. `bundle install`
+4. `rails s`
 
 
 ## Run Specs
