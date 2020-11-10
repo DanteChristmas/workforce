@@ -16,7 +16,11 @@ And then execute:
 $ bundle
 ```
 
+
+
 ## Running Locally
+Install ruby 2.7, redis-server
+
 1. add `.env` to root of repo with `POSTGRES_USER` and `POSTGRES_PASSWORD` defined
 2. `source .env`
 3. `bundle install`
