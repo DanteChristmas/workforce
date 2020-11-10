@@ -6,5 +6,9 @@ module Workforce
     validates :start_time, :end_time, :quantity, presence: true
     validates :quantity, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
     validates_time :start_time, before:  :end_time
+
+    def open_assignments?
+      workforce_assignments.count < quantity
+    end
   end
 end

@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :workforce_assignment, class: 'Workforce::Assignment' do
-    association :workforce_shift
-    association :assignee, factory: :user
+    workforce_shift { create(:workforce_shift) }
+    assignee { create(:user) }
   end
 end
