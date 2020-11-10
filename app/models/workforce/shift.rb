@@ -1,8 +1,7 @@
 module Workforce
   class Shift < ApplicationRecord
     belongs_to :job, polymorphic: true
-    has_many :workforce_assignments, as: :assignments
-    has_many :assignees, through: :assignments
+    has_many :workforce_assignments, class_name: 'Workforce::Assignment', foreign_key: 'workforce_shift_id'
 
     validates :start_time, :end_time, :quantity, presence: true
     validates :quantity, numericality: { only_integer: true, greater_than_or_equal_to: 0 }

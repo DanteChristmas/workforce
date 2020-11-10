@@ -11,5 +11,11 @@ gemspec
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
-# To use a debugger
-# gem 'byebug', group: [:development, :test]
+group :development, :test do
+  ## Required to make shoulda happy
+  ## Will not load from gemspec
+  gem 'shoulda-matchers', '~> 4.0'
+
+  gem 'guard-rspec'
+  gem 'byebug'
+end

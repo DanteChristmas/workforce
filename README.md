@@ -27,6 +27,9 @@ $ bundle
 1. `rails db:create db:migrate RAILS_ENV=test`
 2. `bundle exec rspec spec`
 
+## Watch Specs
+1. `bundle exec guard`
+
 ## Lint 
 code with `rubocop --fix`
 
